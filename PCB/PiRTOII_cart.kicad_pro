@@ -37,9 +37,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.762,
-          "height": 1.524,
-          "width": 1.524
+          "drill": 0.0,
+          "height": 0.5,
+          "width": 1.0
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -49,7 +49,7 @@
         "silk_text_upright": false,
         "zones": {
           "45_degree_only": false,
-          "min_clearance": 0.508
+          "min_clearance": 0.0
         }
       },
       "diff_pair_dimensions": [
@@ -59,7 +59,14 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        "lib_footprint_mismatch|89662500|143000000|b23e6e74-3e3c-46ac-9e90-1ca9f147cc6e|00000000-0000-0000-0000-000000000000",
+        "starved_thermal|124800000|128530000|864a64c7-e884-4fd3-9d9a-356605bf54df|34603760-f9d5-47bc-ad03-cacb3380344f|F.Cu",
+        "starved_thermal|124800000|128530000|864a64c7-e884-4fd3-9d9a-356605bf54df|672fc2a3-5ad0-4e9d-820f-82fa07966e3d|B.Cu",
+        "starved_thermal|124800000|128530000|864a64c7-e884-4fd3-9d9a-356605bf54df|672fc2a3-5ad0-4e9d-820f-82fa07966e3d|F.Cu",
+        "starved_thermal|137500000|128530000|864a64c7-e884-4fd3-9d9a-356605bf54df|247b01e4-ae5f-4ce3-8639-7fb765fb91cf|B.Cu",
+        "starved_thermal|99400000|128530000|864a64c7-e884-4fd3-9d9a-356605bf54df|276b3439-af3a-4ede-8673-c09b1c612b5d|B.Cu"
+      ],
       "meta": {
         "version": 2
       },
@@ -67,7 +74,7 @@
         "annular_width": "error",
         "clearance": "error",
         "connection_width": "warning",
-        "copper_edge_clearance": "ignore",
+        "copper_edge_clearance": "warning",
         "copper_sliver": "warning",
         "courtyards_overlap": "error",
         "diff_pair_gap_out_of_range": "error",
@@ -83,22 +90,22 @@
         "invalid_outline": "error",
         "isolated_copper": "warning",
         "item_on_disabled_layer": "error",
-        "items_not_allowed": "ignore",
+        "items_not_allowed": "warning",
         "length_out_of_range": "error",
         "lib_footprint_issues": "warning",
         "lib_footprint_mismatch": "warning",
         "malformed_courtyard": "error",
         "microvia_drill_out_of_range": "error",
-        "missing_courtyard": "ignore",
+        "missing_courtyard": "warning",
         "missing_footprint": "warning",
         "net_conflict": "warning",
-        "npth_inside_courtyard": "ignore",
+        "npth_inside_courtyard": "warning",
         "padstack": "error",
-        "pth_inside_courtyard": "ignore",
+        "pth_inside_courtyard": "warning",
         "shorting_items": "error",
         "silk_edge_clearance": "warning",
         "silk_over_copper": "warning",
-        "silk_overlap": "ignore",
+        "silk_overlap": "warning",
         "skew_out_of_range": "error",
         "solder_mask_bridge": "error",
         "starved_thermal": "error",
@@ -468,8 +475,25 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.25,
-        "via_diameter": 0.8,
+        "via_diameter": 0.6,
         "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.2,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Power",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.5,
+        "via_diameter": 0.8,
+        "via_drill": 0.6,
         "wire_width": 6
       }
     ],
@@ -478,14 +502,35 @@
     },
     "net_colors": null,
     "netclass_assignments": null,
-    "netclass_patterns": []
+    "netclass_patterns": [
+      {
+        "netclass": "Power",
+        "pattern": "GND"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "+5V"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "Net-(CN1-EXT*"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "Net-(CN1-ROM_DISABLE)"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "Net-(CN1-MCLK)"
+      }
+    ]
   },
   "pcbnew": {
     "last_paths": {
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "gerbers/",
       "pos_files": "",
       "specctra_dsn": "PiRTOII_cart.dsn",
       "step": "",
@@ -605,7 +650,7 @@
   "sheets": [
     [
       "e63e39d7-6ac0-4ffd-8aa3-1841a4541b55",
-      "Principale"
+      "Root"
     ]
   ],
   "text_variables": {}

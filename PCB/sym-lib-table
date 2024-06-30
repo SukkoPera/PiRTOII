@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "MCU_RaspberryPi_and_Boards")(type "KiCad")(uri "${SUKKO_GLOBAL_LIBS}/KiCad-RP-Pico/RP-Pico Libraries/MCU_RaspberryPi_and_Boards.kicad_sym")(options "")(descr ""))
+  (lib (name "INTELLIVISION_CART_CONN")(type "KiCad")(uri "${KIPRJMOD}/libs/INTELLIVISION_CART_CONN.kicad_sym")(options "")(descr ""))
+)
