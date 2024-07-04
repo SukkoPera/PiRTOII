@@ -49,7 +49,7 @@
         "silk_text_upright": false,
         "zones": {
           "45_degree_only": false,
-          "min_clearance": 0.0
+          "min_clearance": 0.254
         }
       },
       "diff_pair_dimensions": [
@@ -61,11 +61,14 @@
       ],
       "drc_exclusions": [
         "lib_footprint_mismatch|89662500|143000000|b23e6e74-3e3c-46ac-9e90-1ca9f147cc6e|00000000-0000-0000-0000-000000000000",
-        "starved_thermal|124800000|128530000|864a64c7-e884-4fd3-9d9a-356605bf54df|34603760-f9d5-47bc-ad03-cacb3380344f|F.Cu",
-        "starved_thermal|124800000|128530000|864a64c7-e884-4fd3-9d9a-356605bf54df|672fc2a3-5ad0-4e9d-820f-82fa07966e3d|B.Cu",
-        "starved_thermal|124800000|128530000|864a64c7-e884-4fd3-9d9a-356605bf54df|672fc2a3-5ad0-4e9d-820f-82fa07966e3d|F.Cu",
-        "starved_thermal|137500000|128530000|864a64c7-e884-4fd3-9d9a-356605bf54df|247b01e4-ae5f-4ce3-8639-7fb765fb91cf|B.Cu",
-        "starved_thermal|99400000|128530000|864a64c7-e884-4fd3-9d9a-356605bf54df|276b3439-af3a-4ede-8673-c09b1c612b5d|B.Cu"
+        "starved_thermal|111633000|175735000|864a64c7-e884-4fd3-9d9a-356605bf54df|45cd5182-5ca6-4a00-b9b2-242fe6b1f9e7|B.Cu",
+        "starved_thermal|114173000|175735000|864a64c7-e884-4fd3-9d9a-356605bf54df|fa6b2074-e626-46fb-bf51-07883d0a55e9|B.Cu",
+        "starved_thermal|116713000|175735000|864a64c7-e884-4fd3-9d9a-356605bf54df|65beed14-bb05-4f3a-b48f-d922bdf49d9b|B.Cu",
+        "starved_thermal|119253000|175735000|864a64c7-e884-4fd3-9d9a-356605bf54df|1e9aef09-b8dc-438f-bc7c-1c49c6f243d2|B.Cu",
+        "text_height|110109000|177843884|31401b33-d1c3-4394-84b2-14b5fb39faa6|00000000-0000-0000-0000-000000000000",
+        "text_height|122855881|177673000|7e598d34-d5b1-445e-9f47-5ed4fa234c28|00000000-0000-0000-0000-000000000000",
+        "text_height|145727902|177326518|6075fbf8-eec7-485c-9cb1-d6c8245c84b9|00000000-0000-0000-0000-000000000000",
+        "text_height|99441000|149606000|148d80b4-4d8a-477c-8f9b-ef45c4521432|00000000-0000-0000-0000-000000000000"
       ],
       "meta": {
         "version": 2
@@ -190,6 +193,9 @@
       ],
       "track_widths": [
         0.0,
+        0.25,
+        0.4,
+        0.5,
         1.0
       ],
       "tuning_pattern_settings": {
@@ -242,7 +248,12 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [],
+    "erc_exclusions": [
+      "pin_to_pin|1727200|1231900|b80ee014-44c0-420a-baee-50c05109274d|eba4706b-1e67-481f-b94d-e8e979673827|/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55|/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55|/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55",
+      "pin_to_pin|1727200|1257300|517074f6-6929-474e-8d98-32d507737f02|d4b406ff-a2a6-4f3c-bfed-e76c2253c507|/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55|/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55|/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55",
+      "pin_to_pin|1727200|1282700|06ea16a8-cc9b-4171-88bc-6230bf40cb64|73df03b7-3909-40c9-9d9c-1a087979b285|/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55|/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55|/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55",
+      "pin_to_pin|1727200|1308100|f039c697-cdb9-485a-b4e8-a65da5112e7c|b36d6714-e744-4f66-a88b-8df795b06c36|/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55|/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55|/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+    ],
     "meta": {
       "version": 0
     },
@@ -522,6 +533,14 @@
       {
         "netclass": "Power",
         "pattern": "Net-(CN1-MCLK)"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "+3.3V"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "Net-(D1-K)"
       }
     ]
   },
@@ -590,13 +609,37 @@
           "label": "DNP",
           "name": "${DNP}",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "#",
+          "name": "${ITEM_NUMBER}",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Device",
+          "name": "Sim.Device",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Pins",
+          "name": "Sim.Pins",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Description",
+          "name": "Description",
+          "show": false
         }
       ],
       "filter_string": "",
       "group_symbols": true,
-      "name": "Grouped By Value",
+      "name": "",
       "sort_asc": true,
-      "sort_field": "Riferimento"
+      "sort_field": "Reference"
     },
     "connection_grid_size": 50.0,
     "drawing": {
