@@ -1,4 +1,4 @@
-23373500197507867
+23375220314697532
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -83313,6 +83313,13 @@ Floppy Power, Right Angle
 0
 4
 4
+PiRTOII
+GCT-MEM2055-00-190-01-A
+http://www.farnell.com/datasheets/1917242.pdf
+MicroSD card socket
+0
+13
+11
 PiRTOII
 Intellivision_Edge_Connector
 
