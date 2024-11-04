@@ -20,7 +20,9 @@
 
 #include "flash_fs.h"
 
-#define SECTOR_NUM 30716 //2044 //1800
+//~ #define SECTOR_NUM 30716 // 16 MB
+#define SECTOR_NUM 2044 // ~1 MB
+//~ #define SECTOR_NUM 1800	// ~900 kB
 #define SECTOR_SIZE 512
 
 void create_fatfs_disk();
