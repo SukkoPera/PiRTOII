@@ -19,7 +19,8 @@
 #ifndef __INTY_CART_H__
 #define __INTY_CART_H__
 
-#define MSYNC_PIN 19
+// These are also defined in .c, make sure they are coherent
+#define MSYNC_PIN 21
 #define RST_PIN   20
 
 void Inty_cart_main();

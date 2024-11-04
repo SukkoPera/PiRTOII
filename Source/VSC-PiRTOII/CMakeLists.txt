@@ -6,8 +6,8 @@ include(pico_sdk_import.cmake)
 
 project(PIRTOII_cart)
 
-set(PICO_BOARD_HEADER_DIRS ${CMAKE_SOURCE_DIR}) 
-set(PICO_BOARD myboard)
+#~ set(PICO_BOARD_HEADER_DIRS ${CMAKE_SOURCE_DIR}) 
+#~ set(PICO_BOARD myboard)
 
 # initialize the Raspberry Pi Pico SDK
 pico_sdk_init()
@@ -15,11 +15,12 @@ pico_sdk_init()
 add_executable(PIRTOII_cart)
 
 # 16megs of flash on purple pico clones
-target_compile_definitions(PIRTOII_cart PRIVATE
-    PICO_FLASH_SIZE_BYTES=16777216
-)
+#~ target_compile_definitions(PIRTOII_cart PRIVATE
+#    PICO_FLASH_SIZE_BYTES=16777216
+#~ )
 
-target_compile_options(PIRTOII_cart PRIVATE "-Os")
+#~ target_compile_options(PIRTOII_cart PRIVATE "-Os")
+target_compile_options(PIRTOII_cart PRIVATE "-O2")
 
 #pico_set_linker_script(PIRTOII_cart ${CMAKE_CURRENT_SOURCE_DIR}/memmap_custom.ld)
 
