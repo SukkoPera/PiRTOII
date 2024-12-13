@@ -1,13 +1,13 @@
 # PiRTO II
-Intellivision flash multicart based on Pico clone
+PiRTO II if a flash multicart for the Mattel Intellivision based on the Raspberry Pico.
 
 ## Summary
 This is my variation on [Andrea Ottaviani's PiRTO II](https://github.com/aotta/PiRTOII) flash multicart for the Mattel Intellivision.
 
-My original goal was to adapt it in order to use original Pico boards, of which I had plenty. While studying the project I decided to introduce proper level shifting and a MicroSD card slot. All of this eventually made the project very similar to Andrea's [first version of the cart](https://github.com/aotta/PiRTO), of which I was unaware of the time, but it uses through-hole components and one less chip.
+My original goal was to adapt it in order to use original Pico boards, of which I had plenty. While studying the project I decided to introduce proper level shifting and a MicroSD card slot (since the original Pico has less flash space than the purple clones used in the original project). All of this eventually made the project very similar to Andrea's [first version of the cart](https://github.com/aotta/PiRTO), of which I was unaware of the time, but it uses through-hole components and one less chip.
 
 ## Usage
-The Pico must be flashed with the firmware that is available on this page. Do NOT use the firmware from the original project, I will try to incorporate any upstream changes.
+The Pico **MUST** be flashed with the firmware that is available on this page. Do **NOT** use the firmware from the original project, I will try to incorporate any upstream changes.
 
 For all the rest, please refer to [the original project](https://github.com/aotta/PiRTOII) or to the [AtariAge forum](https://forums.atariage.com/forum/125-intellivision-aquarius/).
 
