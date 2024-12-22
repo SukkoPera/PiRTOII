@@ -1,7 +1,7 @@
 # PiRTO II
 PiRTO II if a flash multicart for the Mattel Intellivision based on the Raspberry Pico.
 
-![Board](https://raw.githubusercontent.com/SukkoPera/PiRTOII/master/img/render-top.png)
+![Board](https://raw.githubusercontent.com/SukkoPera/PiRTOII/original_pico/img/render-top.png)
 
 ## Summary
 This is my variation on [Andrea Ottaviani's PiRTO II](https://github.com/aotta/PiRTOII) flash multicart for the Mattel Intellivision.
