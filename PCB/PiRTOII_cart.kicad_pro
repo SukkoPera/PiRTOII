@@ -60,7 +60,6 @@
         }
       ],
       "drc_exclusions": [
-        "lib_footprint_mismatch|89662500|143000000|b23e6e74-3e3c-46ac-9e90-1ca9f147cc6e|00000000-0000-0000-0000-000000000000",
         "starved_thermal|111633000|175735000|864a64c7-e884-4fd3-9d9a-356605bf54df|45cd5182-5ca6-4a00-b9b2-242fe6b1f9e7|B.Cu",
         "starved_thermal|114173000|175735000|864a64c7-e884-4fd3-9d9a-356605bf54df|fa6b2074-e626-46fb-bf51-07883d0a55e9|B.Cu",
         "starved_thermal|116713000|175735000|864a64c7-e884-4fd3-9d9a-356605bf54df|65beed14-bb05-4f3a-b48f-d922bdf49d9b|B.Cu",
@@ -87,6 +86,7 @@
         "footprint_type_mismatch": "error",
         "hole_clearance": "error",
         "hole_near_hole": "error",
+        "holes_co_located": "warning",
         "invalid_outline": "error",
         "isolated_copper": "warning",
         "item_on_disabled_layer": "error",
@@ -552,6 +552,7 @@
   },
   "schematic": {
     "annotate_start_num": 0,
+    "bom_export_filename": "",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
       "field_delimiter": ",",

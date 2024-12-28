@@ -6,7 +6,7 @@
 	(paper "A")
 	(title_block
 		(title "PiRTO II Cart - \"Official Pico\" Edition")
-		(date "2024-07-05")
+		(date "2024-12-05")
 		(rev "2git")
 		(company "Andrea Ottaviani/SukkoPera")
 		(comment 1 "github.com/SukkoPera/PiRTOII-OP")
@@ -5413,6 +5413,16 @@
 	)
 	(wire
 		(pts
+			(xy 163.83 73.66) (xy 163.83 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0a92d886-3e60-434b-903f-5cb7c7237cc6")
+	)
+	(wire
+		(pts
 			(xy 107.95 191.77) (xy 107.95 198.12)
 		)
 		(stroke
@@ -5693,7 +5703,7 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 68.58) (xy 163.83 68.58)
+			(xy 142.24 68.58) (xy 168.91 68.58)
 		)
 		(stroke
 			(width 0)
@@ -6543,7 +6553,7 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 78.74) (xy 163.83 78.74)
+			(xy 142.24 78.74) (xy 166.37 78.74)
 		)
 		(stroke
 			(width 0)
@@ -6793,7 +6803,7 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 81.28) (xy 163.83 81.28)
+			(xy 142.24 81.28) (xy 168.91 81.28)
 		)
 		(stroke
 			(width 0)
@@ -7103,6 +7113,16 @@
 	)
 	(wire
 		(pts
+			(xy 168.91 68.58) (xy 168.91 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "df552420-c9ba-462b-bea2-e71ef2ce701c")
+	)
+	(wire
+		(pts
 			(xy 95.25 68.58) (xy 96.52 68.58)
 		)
 		(stroke
@@ -7183,7 +7203,7 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 71.12) (xy 163.83 71.12)
+			(xy 142.24 71.12) (xy 166.37 71.12)
 		)
 		(stroke
 			(width 0)
@@ -7230,6 +7250,16 @@
 			(type default)
 		)
 		(uuid "e9329390-5add-4856-8c54-33967150ad1c")
+	)
+	(wire
+		(pts
+			(xy 166.37 71.12) (xy 166.37 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e9df73f0-7eab-4ec0-885c-1f52c75a7281")
 	)
 	(wire
 		(pts
@@ -8453,7 +8483,7 @@
 	)
 	(global_label "bdir_lv"
 		(shape output)
-		(at 148.59 114.3 0)
+		(at 148.59 119.38 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8463,7 +8493,7 @@
 		)
 		(uuid "4278ecb2-f2cf-43fb-ae7b-75206bbc43e1")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 157.8646 114.3 0)
+			(at 157.8646 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8563,7 +8593,7 @@
 	)
 	(global_label "bc1_lv"
 		(shape output)
-		(at 148.59 119.38 0)
+		(at 148.59 114.3 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8573,7 +8603,7 @@
 		)
 		(uuid "49872285-cbff-49ba-a939-a1c56282047e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 157.6227 119.38 0)
+			(at 157.6227 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8618,28 +8648,6 @@
 		(uuid "4ff8fefe-5cf6-41b6-8f1d-74f1ab3eedc3")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 244.2247 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "bdir'"
-		(shape input)
-		(at 163.83 73.66 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "5084bdcb-32ce-4299-9601-ca5a4f49630f")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 171.109 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9133,28 +9141,6 @@
 			)
 		)
 	)
-	(global_label "bc2'"
-		(shape input)
-		(at 163.83 71.12 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "7e5c82d3-c832-4ecd-bfb3-045614f349fb")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 170.8671 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "d11'"
 		(shape bidirectional)
 		(at 38.1 53.34 180)
@@ -9311,7 +9297,7 @@
 	)
 	(global_label "bdir'"
 		(shape input)
-		(at 123.19 114.3 180)
+		(at 123.19 119.38 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -9321,7 +9307,7 @@
 		)
 		(uuid "90cc3f02-1451-4b71-9bf7-38c3d13f13b2")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 116.4831 114.2206 0)
+			(at 116.4831 119.3006 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9481,28 +9467,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "bc2'"
-		(shape output)
-		(at 163.83 78.74 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "9b7856c2-ac46-437e-90bf-3484a760d5d5")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 170.8671 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 				(hide yes)
 			)
 		)
@@ -9789,28 +9753,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "bc1'"
-		(shape input)
-		(at 163.83 68.58 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "b4dad10b-f2c4-417b-8354-ef1cd6a044aa")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 170.8671 68.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 				(hide yes)
 			)
 		)
@@ -10145,28 +10087,6 @@
 			)
 		)
 	)
-	(global_label "bdir'"
-		(shape output)
-		(at 163.83 76.2 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "e090912b-89d8-47d3-89d2-71b13cbdf0d6")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 171.109 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "bc2'"
 		(shape output)
 		(at 38.1 78.74 180)
@@ -10301,7 +10221,7 @@
 	)
 	(global_label "bc1'"
 		(shape input)
-		(at 123.19 119.38 180)
+		(at 123.19 114.3 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -10311,7 +10231,7 @@
 		)
 		(uuid "e921422d-cf37-469d-886b-cd760b5b8645")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 116.725 119.3006 0)
+			(at 116.725 114.2206 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10383,28 +10303,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "bc1'"
-		(shape output)
-		(at 163.83 81.28 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "f6ed27b8-8190-4398-a74b-e3b680ca15cf")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 170.8671 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 				(hide yes)
 			)
 		)
@@ -10536,7 +10434,7 @@
 				)
 			)
 		)
-		(property "Value" "MICRO_SD_SLOT	"
+		(property "Value" "MICRO_SD_SLOT"
 			(at 85.09 197.612 0)
 			(effects
 				(font
