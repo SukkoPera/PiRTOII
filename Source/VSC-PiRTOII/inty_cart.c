@@ -33,8 +33,8 @@
 #include "rom.h"
 
 #include "tusb.h"
+#include "sd_card.h"
 #include "ff.h"
-#include "fatfs_disk.h"
 
 #include "inty_cart.h"
 
@@ -537,7 +537,7 @@ int search_directory(char *path, char *search) {
 	num_dir_entries = 0;
 	int i;
 	FATFS FatFs;
-	if (f_mount(&FatFs, "", 1) == FR_OK) {
+	if (f_mount(&FatFs, "0:", 1) == FR_OK) {
 		if (scan_files(pathBuf, search) == FR_OK) {
 			// sort by score, name
 			qsort((DIR_ENTRY *)&files[0], num_dir_entries, sizeof(DIR_ENTRY), entry_compare);
@@ -557,11 +557,11 @@ int read_directory(char *path) {
 	num_dir_entries = 0;
 	DIR_ENTRY *dst = (DIR_ENTRY *)&files[0];
 
-    if (!fatfs_is_mounted())
-       mount_fatfs_disk();
+    //if (!fatfs_is_mounted())
+    //   mount_fatfs_disk();
 
 	FATFS FatFs;
-	if (f_mount(&FatFs, "", 1) == FR_OK) {
+	if (f_mount(&FatFs, "0:", 1) == FR_OK) {
 		DIR dir;
 		if (f_opendir(&dir, path) == FR_OK) {
 			while (num_dir_entries < 255) {
@@ -591,7 +591,7 @@ int read_directory(char *path) {
 		}
 		else
 			strcpy(errorBuf, "Can't read directory");
-		f_mount(0, "", 1);
+		f_mount(0, "0:", 1);
 		qsort((DIR_ENTRY *)&files[0], num_dir_entries, sizeof(DIR_ENTRY), entry_compare);
 		ret = 1;
 	}
@@ -612,7 +612,7 @@ int load_file(char *filename) {
 	
   //printInty("loadfile");
   //printInty(filename);
-  if (f_mount(&FatFs, "", 1) != FR_OK) {
+  if (f_mount(&FatFs, "0:", 1) != FR_OK) {
 		strcpy(errorBuf, "Can't read flash memory");
     error(1);
 		return 0;
@@ -651,7 +651,7 @@ closefile:
  	f_close(&fil);
 
 cleanup:
-	f_mount(0, "", 1);
+	f_mount(0, "0:", 1);
 
 	return br;
 }
@@ -684,7 +684,7 @@ int load_cfg(char *filename) {
    memcpy(filename,tmp,sizeof(tmp));
    
 	  
-  if (f_mount(&FatFs, "", 1) != FR_OK) {
+  if (f_mount(&FatFs, "0:", 1) != FR_OK) {
 		strcpy(errorBuf, "Can't read flash memory");
 		error(8);
     return 0;
@@ -857,7 +857,7 @@ closefile:
 	f_close(&fil);
   
 cleanup:
-	f_mount(0, "", 1);
+	f_mount(0, "0:", 1);
 
 	return br;
 }

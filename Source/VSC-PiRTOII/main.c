@@ -15,17 +15,17 @@
 //
 */
 
-
-
 #include <stdio.h>
 #include <string.h>
 
 #include "pico/stdlib.h"
 #include "pico/time.h"
 #include "tusb.h"
-
+#include "tusb_config.h"
 #include "inty_cart.h"
-#include "fatfs_disk.h"
+#include "sd_card.h"
+#include "ff.h"
+//#include "fatfs_disk.h"
 
 //void cdc_task(void);
 
@@ -128,8 +128,8 @@ int main(void)
 void tud_mount_cb(void)
 {
   printf("Device mounted\n"); 
-  if (!mount_fatfs_disk())
-    create_fatfs_disk();
+  //if (!mount_fatfs_disk())
+  //  create_fatfs_disk();
 }
 
 // Invoked when device is unmounted

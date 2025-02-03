@@ -19,7 +19,7 @@
     const dirfile=$8651
     const chk=$815e
     const debug=$8163
-    
+    Dim Counter
 
     dim tipo(10)
     poke(mst),0
@@ -59,13 +59,34 @@ avanti:
 
     wait
     PRINT AT SCREENPOS(2, 0) COLOR CS_RED,"PiRTO II"
-    PRINT COLOR CS_WHITE," - Flash"
+    PRINT COLOR CS_WHITE," - SD"
     PRINT AT SCREENPOS(0, 11) COLOR CS_WHITE,"ENT/BT:sel*CLR:../"
     
    
       
 menu:
     GOSUB leggimenu
+    ' ------------------------------------------------------
+	' First, we wait for the controller to be completely
+	' at rest, with no input, for DEBOUNCE_DELAY cycles.
+	' This ensures we will get a brand new key press.
+	' ------------------------------------------------------
+	Counter = 0
+	WHILE (Counter < DEBOUNCE_DELAY)
+		WAIT
+		IF (cont <> NO_KEY) THEN
+			Counter = 0
+		ELSE
+			Counter = (Counter + 1)
+		END IF
+	WEND
+
+    ' ------------------------------------------------------
+	' Then, we wait for a new controller key press.
+	' ------------------------------------------------------
+	WHILE (cont = NO_KEY)
+		WAIT
+	WEND
     c = cont
     
     if (c=KEYPAD_ENTER) or (c=BUTTON_1) or (c=BUTTON_2) or (c=BUTTON_3) then 
