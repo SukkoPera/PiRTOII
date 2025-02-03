@@ -12,7 +12,7 @@
 ' Define Constants
 ' =========================================================================
 CONST TITLE_ROW        = 6					' Background row in which to print TITLE string
-CONST TITLE_LENGTH     = LEN("PiRTOII")	' Length of TITLE string, in characters
+CONST TITLE_LENGTH     = LEN("PiRTOII-SD")	' Length of TITLE string, in characters
 CONST TITLE_COLOR      = CS_YELLOW			' Color of TITLE string
 
 CONST AUTHOR_ROW       = 10					' Background row in which to print AUTHOR string
@@ -101,7 +101,7 @@ DEF FN SpritePosY(aRow, anOffset)    = ((aRow    + 1) * CARD_HEIGHT) + anOffset
 	PRINT AT TextCenterPos( 8, BRAND_ROW + 1) COLOR BRAND_COLOR, "presents"
 
 	' Print project-specific information
-	PRINT AT TextCenterPos(TITLE_LENGTH,  TITLE_ROW) COLOR TITLE_COLOR, "PiRTOII"
+	PRINT AT TextCenterPos(TITLE_LENGTH,  TITLE_ROW) COLOR TITLE_COLOR, "PiRTOII-SD"
 	PRINT AT TextCenterPos((AUTHOR_LENGTH + 6), AUTHOR_ROW) + 0, BG04 + AUTHOR_COLOR
 	PRINT AT TextCenterPos((AUTHOR_LENGTH + 6), AUTHOR_ROW) + 1 COLOR AUTHOR_COLOR,  " [YOUR NAME]"
 
