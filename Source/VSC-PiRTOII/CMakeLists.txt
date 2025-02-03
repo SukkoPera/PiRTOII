@@ -48,6 +48,7 @@ target_sources(PIRTOII_cart PUBLIC
     ${CMAKE_CURRENT_LIST_DIR}/usb_descriptors.c
     ${CMAKE_CURRENT_LIST_DIR}/fatfs_disk.c
     ${CMAKE_CURRENT_LIST_DIR}/flash_fs.c
+    ${CMAKE_CURRENT_LIST_DIR}/hw_config.c
 ) 
 
 target_include_directories(PIRTOII_cart PUBLIC

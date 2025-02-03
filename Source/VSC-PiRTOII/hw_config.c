@@ -1,0 +1,1 @@
+submodules/no-OS-FatFS-SD-SPI-RPi-Pico/example/maker_pi_pico.hw_config.c
