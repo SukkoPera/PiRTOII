@@ -22,7 +22,7 @@ U2/3/4 **MUST** be 74LVC245. Do **NOT** get these from China, as they will likel
 
 Other BJTs will probably work for Q1, just make sure they have the same pinout.
 
-JP1/2/3/4 are experimental jumpers and **MUST** be closed for the moment.
+JP1/2/3/4 are experimental jumpers and all of them **except** JP4 **MUST** be closed for the moment.
 
 ## Releases
 If you want to get this board produced, you are recommended to get [the latest release](https://github.com/SukkoPera/PiRTOII/releases) rather than the current git version, as the latter might be under development and is not guaranteed to be working.
