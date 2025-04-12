@@ -265,7 +265,11 @@ while(1) {
         // We can just output it.
         SET_DATA_MODE_OUT;
         gpio_put_masked(DATA_PIN_MASK,dataOut);
-        asm inline ("nop;nop;nop;nop;");
+
+	    /* The following was originally "asm inline" but for some reason it won't compile anymore, so let's switch to
+	     * "volatile". TBH I wonder if this is needed at all...
+	     */
+	    asm volatile ("nop;nop;nop;nop;");
        // while ((gpio_get_all() & BC1_PIN_MASK)); // wait while bc1 & bc2 are high... it's enough test BC1
         //~ while(((gpio_get_all() & BC1e2_PIN_MASK)>>BC2_PIN)==3);
         while((gpio_get_all() & BC1e2_PIN_MASK) == BC1e2_PIN_MASK)
