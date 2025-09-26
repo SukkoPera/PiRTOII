@@ -9,11 +9,12 @@ This is my variation on [Andrea Ottaviani's PiRTO II](https://github.com/aotta/P
 My original goal was to adapt it in order to use original Pico boards, of which I had plenty. While studying the project I decided to introduce proper level shifting and a MicroSD card slot (since the original Pico has less flash space than the purple clones used in the original project). All of this eventually made the project very similar to Andrea's [first version of the cart](https://github.com/aotta/PiRTO), of which I was unaware of the time, but it uses through-hole components and one less chip.
 
 ## Usage
-The Pico **MUST** be flashed with the firmware that is available on this page. Do **NOT** use the firmware from the original project, I will try to incorporate any upstream changes.
+The Pico must be flashed with some firmware. You have a couple of choices:
+- If you want to use Andrea's original firmware, you have to use the version from this page, which was changed to reflect the different pin mapping. Do **NOT** use the firmware from the original project, I will try to incorporate any upstream changes. This firmware has **NO SUPPORT** for the SD card slot.
+- storm_walker has updated Andrea's firmware to support the SD card slot. You can get his version from [the sd_support branch](https://github.com/SukkoPera/PiRTOII/tree/sd_support). As far as I'm aware, this version **ONLY** supports the SD card slot. Any ROMs stored in the Pico's flash memory will not be usable.
+- Alternatively, you can use [the Minty firmware from Gennaro Tortone](https://github.com/gtortone/Minty), which supports this variant starting from version 1.2. This should support both ROMs from the Pico's flash memory and from the SD card.
 
-Note that **support for the SD card has NOT yet been implemented**.
-
-For all the rest, please refer to [the original project](https://github.com/aotta/PiRTOII) or to the [AtariAge forum](https://forums.atariage.com/forum/125-intellivision-aquarius/).
+For any other needs, please refer to [the original project](https://github.com/aotta/PiRTOII) or to the [AtariAge forum](https://forums.atariage.com/forum/125-intellivision-aquarius/).
 
 ## Assembly
 This board was designed **for the original Raspberry Pico board**, so either use that or a clone that has the same pinout. It's your responsibility to ascertain that.
